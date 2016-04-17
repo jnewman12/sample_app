@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '3.2.0.0'
 
@@ -18,6 +18,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
   gem 'sqlite3'
+  gem "factory_girl_rails"
+  gem 'faker'
+  gem 'pry'
 end
 
 group :development do
@@ -25,8 +28,15 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'rspec-collection_matchers'
+  gem "email_spec"
+end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'puma'
 end
+
