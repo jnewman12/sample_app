@@ -110,6 +110,20 @@ input {
   height: auto !important;
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* form errors */
 #error_explanation {
   color: red;
@@ -127,7 +141,6 @@ input {
 }
 
 /* user sidebar */
-
 aside {
   section.user_info {
     margin-top: 20px;
@@ -165,7 +178,6 @@ aside {
 
 
 /* miscellaneous */
-
 .debug_dump {
   clear: both;
   float: left;
