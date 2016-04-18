@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap
+
+// fading out js alerts
+$(".alert" ).fadeOut(3000);
