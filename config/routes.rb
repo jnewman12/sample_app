@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   # users
   get 'signup'  => 'users#new'
+  resources :users
 end
