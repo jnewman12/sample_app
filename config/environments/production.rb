@@ -77,9 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-
-
-
+  ActionMailer::Base.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
    :address              => "smtp.gmail.com",
    :port                 => 587,
@@ -88,4 +86,6 @@ Rails.application.configure do
    :authentication       => "plain",
   :enable_starttls_auto => true
   }
+  #config.action_mailer.default_url_options = { :host => 'example.com' }
+  Rails.application.routes.default_url_options[:host] = 'protected-reef-61204.herokuapp.com'
 end
