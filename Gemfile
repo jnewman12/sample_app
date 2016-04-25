@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '3.2.0.0'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'faker'
+gem 'figaro'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
