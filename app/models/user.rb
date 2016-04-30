@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   after_validation :geocode 
 
   def set_ip
+    request = Thread.current[:request]
     self.ip = request.remote_ip 
   end                             
   
