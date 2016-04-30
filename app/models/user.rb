@@ -23,13 +23,17 @@ class User < ActiveRecord::Base
 
   # test
   before_create :set_ip
-  geocoded_by :ip 
+  geocoded_by :user_ip 
   after_validation :geocode 
 
   def set_ip
     request = Thread.current[:request]
     self.ip = request.remote_ip 
-  end                             
+  end      
+
+  def user_ip 
+    self.ip
+  end                       
   
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
