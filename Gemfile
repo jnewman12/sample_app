@@ -22,6 +22,8 @@ gem 'fog',                     '1.36.0'
 gem 'faker'
 gem 'figaro'
 
+gem 'geocoder'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
